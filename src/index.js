@@ -12,53 +12,19 @@ const columns = [
   { type: "number", label: "Percent Complete" },
   { type: "string", label: "Dependencies" }
 ];
-var colors = [
-  {
-    color: "#5e97f6",
-    dark: "#2a56c6",
-    light: "#c6dafc"
-  },
-  {
-    color: "#db4437",
-    dark: "#a52714",
-    light: "#f4c7c3"
-  },
-  {
-    color: "#f2a600",
-    dark: "#ee8100",
-    light: "#fce8b2"
-  },
-  {
-    color: "#0f9d58",
-    dark: "#0b8043",
-    light: "#b7e1cd"
-  },
-  {
-    color: "#ab47bc",
-    dark: "#6a1b9a",
-    light: "#e1bee7"
-  },
-  {
-    color: "#00acc1",
-    dark: "#00838f",
-    light: "#b00838f2ebf2"
-  },
-  {
-    color: "#00838f",
-    dark: "#00838f",
-    light: "#b2ebf2"
-  },
-  {
-    color: "#00838f",
-    dark: "#00838f",
-    light: "#00838f"
-  },
-  {
-    color: "#00acc1",
-    dark: "#00838f",
-    light: "#b2ebf2"
+
+//to change color
+/*var options = {
+  gantt: {
+    palette: [
+      {
+        "color": "#cccccc",
+        "dark": "#333333",
+        "light": "#eeeeee"
+      }
+    ]
   }
-];
+}*/
 const rows = [
   [
     "2014Sng",
@@ -88,7 +54,7 @@ const rows = [
     new Date(2014, 11, 20),
     null,
     100,
-    null
+    "2014Summer"
   ],
   [
     "2014Winter",
@@ -98,11 +64,11 @@ const rows = [
     new Date(2015, 2, 21),
     null,
     100,
-    null
+    "2014Summer"
   ],
   [
     "2015Spring",
-    "Spring 2015",
+    "    Spring 2015",
     "spring",
     new Date(2015, 2, 22),
     new Date(2015, 5, 20),
@@ -112,7 +78,7 @@ const rows = [
   ],
   [
     "2015Summer",
-    "Summer 2015",
+    "       Summer 2015",
     "summer",
     new Date(2015, 5, 21),
     new Date(2015, 8, 20),
@@ -132,7 +98,7 @@ const rows = [
   ],
   [
     "2015Winter",
-    "Winter 2015",
+    "      Winter 2015",
     "winter",
     new Date(2015, 11, 21),
     new Date(2016, 2, 21),
@@ -165,7 +131,7 @@ class App extends React.Component {
           height={"600px"}
           legendToggle
           is3D="true"
-          colors={["#eeeeee", "#eeeeee"]}
+          //options = {options}
         />
       </div>
     );
